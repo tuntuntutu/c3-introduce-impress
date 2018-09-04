@@ -1,0 +1,281 @@
+code {
+  font-family: 'Ubuntu Mono', monospace;
+  &.snippet {
+    display: block;
+    position: relative;
+    padding: 5px 10px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, .5);
+    .disabled {
+      opacity: 0.5;
+      text-decoration: line-through;
+    }
+    .indent {
+      white-space: pre;
+    }
+    .comment {
+      font-size: 0.8em;
+      color: #777;
+    }
+  }
+}
+
+.step {
+  width: 800px;
+  padding: 20px;
+  border-radius: 20px;
+  transition: 1s;
+  h2 {
+    font-size: 3.5em;
+  }
+  h3 {
+    font-size: 2.5em;
+    text-transform: lowercase;
+    margin-bottom: 0.2em;
+  }
+  ul {
+    font-size: 1.2em;
+    li {
+      margin-bottom: 0.1em;
+      &:before {
+        content: "★";
+        text-shadow: 0 0 5px rgba(50, 50, 50, 0.7);
+        color: transparent;
+        margin-right: 0.5em;
+      }
+    }
+    b {
+      font-size: 1.1em
+    }
+
+  }
+}
+
+#impress.step-title {
+  .step {
+    opacity: 0.1;
+  }
+  .active {
+    opacity: 1;
+  }
+}
+
+@keyframes rotate-h1 {
+  0% {
+    transform: perspective(1000px) rotateY(-10deg);
+  }
+  100% {
+    transform: perspective(1000px) rotateY(10deg);
+  }
+}
+
+#title {
+  h1 {
+    font-weight: bold;
+    text-align: center;
+    font-size: 6em;
+    line-height: 1;
+
+    transform-style: preserve-3d;
+    animation: rotate-h1 2s infinite alternate ease-in-out;
+
+    transform: perspective(1000px) rotateY(0deg);
+
+    transition: all 2s ease-in-out;
+    .short {
+      text-transform: lowercase;
+      display: block;
+      font-weight: normal;
+      font-size: 0.27em;
+      margin-bottom: 140px;
+      transform: translateZ(-50px);
+    }
+  }
+  .author {
+    display: block;
+    width: 400px;
+    margin: 170px 0 0  500px;
+    text-align: center;
+    font-weight: normal;
+    line-height: 1.5;
+    opacity: 0;
+    transition: opacity 1s;
+  }
+  &.active .author {
+    opacity: 1;
+  }
+}
+
+/*
+ * bisheng STEP
+ * =============================================================================
+ */
+
+#bisheng {
+  width: 1200px;
+  h2 {
+    font-size: 3.5em;
+    text-align: center;
+  }
+  .subtitle {
+    text-align: center;
+    margin-left: 340px;
+  }
+  .left, .right{
+
+    display: inline-block;
+    font-size: 0.8em;
+    box-sizing: border-box;
+    vertical-align: top;
+    padding: 20px;
+  }
+  .dora {
+    width: 40%;
+  }
+  .plugins{
+    width: 58%;
+    .title{
+      font-size: 0.8em;
+    }
+  }
+  .virtual {
+    position: absolute;
+    top: 500px;
+    left: 150px;
+    color: transparent;
+    text-shadow: 0 2px 8px rgba(50, 50, 50, 0.99);
+    span{
+      margin-left: 20px;
+    }
+  }
+
+}
+
+
+
+#framework {
+  width: 1400px;
+  text-align: center;
+  h2 {
+    font-size: 1.5em;
+  }
+  .imgs{
+    img{
+      width: 48%;
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
+}
+
+#config {
+  width: 1600px;
+  z-index: 100;
+  h2 {
+    font-size: 1.5em;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .imgs{
+    img{
+      width: 100%;
+    }
+    .left{
+      width: 48%;
+      display: inline-block;
+      vertical-align: middle;
+    }
+    .right{
+      width: 48%;
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
+}
+#introduce{
+  text-align: center;
+  .red{
+    color: red;
+  }
+  .blue{
+    color: blue;
+  }
+}
+#dataTree{
+  width: 1200px;
+  h2 {
+    font-size: 1.5em;
+    text-align: center;
+  }
+  .imgs{
+    display: flex;
+    align-items: center;
+  }
+  .icon-dakuohao{
+    font-size: 200px;
+    margin: 0 -50px;
+  }
+  .one, .two{
+    padding: 30px;
+    vertical-align: middle;
+  }
+  .one{
+    img{
+      width: 100%;
+    }
+  }
+  .contain{
+    .icon-youjiantou{
+      font-size: 100px;
+    }
+  }
+  .two{
+    .icon-youjiantou{
+      font-size: 40px;
+    }
+    &>div{
+      margin-bottom: 20px;
+    }
+    img{
+      width: 30%;
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
+}
+
+#flow{
+  img{
+    height: 800px;
+  }
+}
+#demos {
+  width: 1200px;
+  h2{
+    font-size: 1.5em;
+  }
+}
+
+
+#end {
+  width: 800px;
+  .author {
+    position: absolute;
+    top: 200px;
+    width: 600px;
+    text-align: right;
+  }
+}
+
+#fixedImgWrap{
+  position: absolute;
+  width: 100%;
+  height: 200%;
+  background: #676767;
+  display: none;
+  overflow: auto;
+  text-align: center;
+}
+#fixedImg{
+
+}

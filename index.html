@@ -1,0 +1,155 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>C³ introduce</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!--<link href="http://fonts.googleapis.com/css?family=Ubuntu:700|Ubuntu+Mono|Crimson+Text:400,700,400italic"-->
+    <!--rel="stylesheet"/>-->
+    <link href="./reset.css" rel="stylesheet"/>
+    <link href="./style.css" rel="stylesheet"/>
+    <link href="./font/iconfont.css" rel="stylesheet"/>
+</head>
+
+<body>
+<div id="impress" class="step-title">
+    <div id="title" class="step">
+        <h1>
+            <span class="short">一个简短的分享</span>
+            <span class="css"><a target='_blank' href="http://dev-web.caocaokeji.cn:8003/">C³</a>介绍</span>
+        </h1>
+        <div class="author">
+            <i>——by</i><a
+                href="https://juejin.im/user/578dbb5979bc44005ff4ac8b">@byteQiu</a>
+        </div>
+    </div>
+
+
+    <div id="list" class="step" data-x="-420" data-y="-400" data-rotate="0" data-scale="0.5">
+        <ul>
+            <li>平台使用介绍</li>
+            <li>技术架构介绍</li>
+        </ul>
+    </div>
+
+    <div id="introduce" class="step" data-x="-120" data-y="-800" data-rotate="30" data-scale="0.5">
+        <h3>如何上传一个组件？</h3>
+        <div>
+            <span class="red">代传</span> or <span class="blue"><a target="_blank"
+                                                                 href="http://git.51caocao.cn/webComponents/readme-guid/blob/master/ccc-md-tpl/readme.md">自传</a></span>
+        </div>
+    </div>
+
+    <div id="framework" class="step" data-x="520" data-y="-400" data-rotate="30" data-scale="0.4">
+        <h2>架构</h2>
+        <div class="imgs">
+            <img src="./img/framework.png" alt="">
+            <img src="./img/flow.jpg" alt="">
+        </div>
+    </div>
+    <div id="bisheng" class="step" data-x="820" data-y="200" data-rotate="90" data-scale="0.5">
+        <h2><a target='_blank' href="https://github.com/benjycui/bisheng">bisheng</a></h2>
+        <div class="subtitle">
+            —— dora & webpack & react & react-router
+        </div>
+        <div>
+            <ul class="left dora">
+                <li>dora： proxy代理插件</li>
+                <li>mark-twain：markdown转jsonML</li>
+                <li>jsonml-to-react-element</li>
+                <li>nunjucks, ssr，lazyload</li>
+            </ul>
+            <ul class="right plugins">
+                <li>bisheng-plugin-description：抽取markdown文件的中间的description部分</li>
+                <li>bisheng-plugin-toc?maxDepth=2&keepElem：产生一个table</li>
+                <li>bisheng-plugin-react?lang=__react：将markdown书写的jsx转换成为React.createElement</li>
+            </ul>
+        </div>
+        <div class="virtual">
+            <span>bisheng-data-loader</span>
+            <span>source-loader</span>
+            <span>bisheng-cli</span>
+        </div>
+    </div>
+
+
+    <div id="config" class="step" data-x="920" data-y="640" data-rotate="90" data-scale="0.2">
+        <div class="imgs">
+            <div class="left">
+                <div>核心配置</div>
+                <img src="./img/core.png" alt="">
+            </div>
+            <div class="right">
+                <div>theme配置</div>
+                <img src="./img/router.png" alt="">
+            </div>
+        </div>
+    </div>
+
+    <div id="dataTree" class="step" data-x="700" data-y="540" data-rotate="100" data-scale="0.25">
+        <h2>markdown data tree</h2>
+        <div class="imgs">
+            <div class="one">
+                <img src="./img/demo-tree.png" alt="">
+            </div>
+            <div>
+                <span class="iconfont icon-dakuohao"></span>
+            </div>
+            <div class="two">
+                <div>
+                    <img src="./img/demo-introduce.png" alt="">
+                    <span class="iconfont icon-youjiantou"></span>
+                    <img src="./img/json-demo.png" alt="">
+                </div>
+                <div>
+                    <img src="./img/introduce.png" alt="">
+                    <span class="iconfont icon-youjiantou"></span>
+                    <img src="./img/json-introduce.png" alt="">
+                </div>
+            </div>
+            <div class="contain">
+                <span class="iconfont icon-youjiantou"></span>
+            </div>
+            <div class="one">
+                <img src="./img/show.png" alt="">
+            </div>
+        </div>
+    </div>
+
+    <div id="flow" class="step" data-x="250" data-y="700" data-rotate="100" data-scale="0.25">
+        <div>
+            <img src="./img/flow2.png" alt="">
+        </div>
+    </div>
+
+    <div id="demos" class="step" data-x="0" data-y="300" data-rotate="0" data-scale="0.2">
+        <h2>
+            Demo: <a target='_blank' href="https://github.com/benjycui/bisheng/tree/master/packages/bisheng-example">bisheng-example</a>
+        </h2>
+    </div>
+
+    <div id="end" class="step" data-x="-900" data-y="-360" data-rotate="-60" data-scale="0.2">
+        <h2>Thank You</h2>
+    </div>
+</div>
+<div id="fixedImgWrap">
+    <img id="fixedImg" src="" alt="">
+</div>
+<script src="https://cdn.bootcss.com/impress.js/0.5.3/impress.min.js"></script>
+<script>
+  window.impress().init();
+  var imgs = document.getElementsByTagName('img');
+  var fixedImg = document.getElementById('fixedImg');
+  var fixedImgWrap = document.getElementById('fixedImgWrap');
+
+  [].slice.call(imgs).forEach(item => item.addEventListener('click', function (e) {
+    fixedImg.src = e.target.src;
+    fixedImgWrap.style.display = 'block';
+    fixedImgWrap.addEventListener('click', function (e) {
+      fixedImgWrap.style.display = 'none';
+    })
+  }))
+
+</script>
+</body>
+</html>
