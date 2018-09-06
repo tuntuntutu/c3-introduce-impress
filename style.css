@@ -145,6 +145,21 @@ code {
   #introduce .blue {
     color: blue; }
 
+#preview {
+  width: 800px; }
+  #preview h3 {
+    font-size: 1.5em;
+    text-align: center; }
+  #preview ul {
+    margin-top: 80px; }
+    #preview ul li {
+      text-align: left;
+      font-size: 0.8em; }
+      #preview ul li span {
+        margin-left: 10px; }
+  #preview .questions {
+    margin-top: 80px; }
+
 #dataTree {
   width: 1200px; }
   #dataTree h2 {

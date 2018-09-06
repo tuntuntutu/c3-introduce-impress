@@ -35,9 +35,29 @@
     <div id="introduce" class="step" data-x="-120" data-y="-800" data-rotate="30" data-scale="0.5">
         <h3>如何上传一个组件？</h3>
         <div>
-            <span class="red">代传</span> or <span class="blue"><a target="_blank"
-                                                                 href="http://git.51caocao.cn/webComponents/readme-guid/blob/master/ccc-md-tpl/readme.md">自传</a></span>
+            <span class="red">专人代传</span> or
+            <span class="blue">
+                <a target="_blank"
+                   href="http://git.51caocao.cn/webComponents/readme-guid/blob/master/ccc-md-tpl/readme.md">
+                自助上传
+                </a>
+            </span>
+            <div style="font-size: 14px;">
+                (存在md语法转react代码失败、命名导致无法访问等问题)
+            </div>
         </div>
+
+
+    </div>
+    <div id="preview" class="step" data-x="220" data-y="-800" data-rotate="30" data-scale="0.5">
+        <h3>预览，自动化部署？</h3>
+        <ul>
+            <li>本地 npm run start 预览<span>✅</span></li>
+            <li>git hook: post-receive<span>❎</span></li>
+            <li>gitlab web hook + node + 可视化发布日志<span>✅</span> <a href="http://dev-web.caocaokeji.cn:3000/" target="_blank">演示</a></li>
+        </ul>
+        <div class="questions">问题1：开放所有人的master提交权限？</div>
+        <div class="questions">问题2：本地预览有必要做成可视化操作吗？</div>
     </div>
 
     <div id="framework" class="step" data-x="520" data-y="-400" data-rotate="30" data-scale="0.4">
